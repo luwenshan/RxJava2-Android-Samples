@@ -42,6 +42,8 @@ public class TakeExampleActivity extends AppCompatActivity {
 
     /* Using take operator, it only emits
     * required number of values. here only 3 out of 5
+    *
+    * take(n)操作，仅发射前n个数据。
     */
     private void doSomeWork() {
         getObservable()

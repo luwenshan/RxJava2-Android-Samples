@@ -20,6 +20,9 @@ public class SelectionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_selection);
     }
 
+    /*
+    参考：http://www.jianshu.com/p/2ddd9bb8b1d7
+     */
     public void startOperatorsActivity(View view) {
         startActivity(new Intent(SelectionActivity.this, OperatorsActivity.class));
     }

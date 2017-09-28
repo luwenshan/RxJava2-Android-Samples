@@ -54,6 +54,8 @@ public class DisposableExampleActivity extends AppCompatActivity {
     /*
      * Example to understand how to use disposables.
      * disposables is cleared in onDestroy of this activity.
+     *
+     * CompositeDisposable是一个Disposable的容器，可以统一控制Observable的停止。
      */
     void doSomeWork() {
         disposables.add(sampleObservable()

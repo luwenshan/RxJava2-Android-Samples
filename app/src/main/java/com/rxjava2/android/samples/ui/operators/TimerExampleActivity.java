@@ -44,6 +44,10 @@ public class TimerExampleActivity extends AppCompatActivity {
 
     /*
      * simple example using timer to do something after 2 second
+     *
+     * timer操作符
+     * Returns an Observable that emits 0L after a specified delay, and then completes.
+     * 创建Observable，并在等待指定的时间之后发射唯一的事件。
      */
     private void doSomeWork() {
         getObservable()

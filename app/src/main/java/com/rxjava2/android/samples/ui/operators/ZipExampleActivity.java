@@ -52,6 +52,11 @@ public class ZipExampleActivity extends AppCompatActivity {
     * One, the list of cricket fans
     * Another one, the list of football fans
     * Then we are finding the list of users who loves both
+    *
+    * Zip通过一个函数将多个Observable发送的事件结合到一起，
+    * 然后发送这些组合到一起的事件. 它按照严格的顺序应用这个函数。
+    * 它只发射与发射数据项最少的那个Observable一样多的数据。
+    * 更多参考: http://www.jianshu.com/p/bb58571cdb64
     */
     private void doSomeWork() {
         Observable.zip(getCricketFansObservable(), getFootballFansObservable(),
