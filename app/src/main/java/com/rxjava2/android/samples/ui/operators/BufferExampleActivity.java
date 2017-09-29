@@ -42,6 +42,11 @@ public class BufferExampleActivity extends AppCompatActivity {
 
     /*
      * simple example using buffer operator - bundles all emitted values into a list
+     *
+     * buffer(int count, int skip)
+     * count表示List长度,skip表示步长
+     *
+     * buffer(int count)表示count == skip
      */
     private void doSomeWork() {
 

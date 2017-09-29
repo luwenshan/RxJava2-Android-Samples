@@ -41,6 +41,8 @@ public class ReduceExampleActivity extends AppCompatActivity {
 
     /*
      * simple example using reduce to add all the number
+     *
+     * reduce是把发射序列内值进行两两比较，直到比较出最值，如果序列的长度小于2，那么不会被回调。
      */
     private void doSomeWork() {
         getObservable()

@@ -63,6 +63,7 @@ public class DisposableExampleActivity extends AppCompatActivity {
                 .subscribeOn(Schedulers.io())
                 // Be notified on the main thread
                 .observeOn(AndroidSchedulers.mainThread())
+                //subscribeWith用于Observer的子类，并返回该Observer
                 .subscribeWith(new DisposableObserver<String>() {
                     @Override
                     public void onComplete() {

@@ -42,6 +42,8 @@ public class SkipExampleActivity extends AppCompatActivity {
 
     /* Using skip operator, it will not emit
     * the first 2 values.
+    *
+    * skip(n)操作符，会跳过前n个结果。
     */
     private void doSomeWork() {
         getObservable()

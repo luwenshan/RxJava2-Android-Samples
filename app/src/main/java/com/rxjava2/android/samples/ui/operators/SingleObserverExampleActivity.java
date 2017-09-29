@@ -40,6 +40,8 @@ public class SingleObserverExampleActivity extends AppCompatActivity {
 
     /*
      * simple example using SingleObserver
+     *
+     * SingleObserver没有onNext()方法
      */
     private void doSomeWork() {
         Single.just("Amit")
