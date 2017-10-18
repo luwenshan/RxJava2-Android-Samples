@@ -53,6 +53,7 @@ public class ConcatExampleActivity extends AppCompatActivity {
         final Observable<String> aObservable = Observable.fromArray(aStrings);
         final Observable<String> bObservable = Observable.fromArray(bStrings);
 
+        // 连接两个被订阅者，订阅者将会按照 a->b 的顺序收到两个被订阅者所发射的消息
         Observable.concat(aObservable, bObservable)
                 .subscribe(getObserver());
     }

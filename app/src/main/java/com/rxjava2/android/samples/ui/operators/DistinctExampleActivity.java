@@ -41,6 +41,10 @@ public class DistinctExampleActivity extends AppCompatActivity {
 
     /*
      * distinct() suppresses duplicate items emitted by the source Observable.
+     *
+     * distinct 仅会发射序列当中之前没有发射过的数据
+     *
+     * 输出1,2,3,4,6
      */
     private void doSomeWork() {
 

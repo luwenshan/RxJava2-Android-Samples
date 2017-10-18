@@ -41,6 +41,8 @@ public class ReplayExampleActivity extends AppCompatActivity {
 
     /* Using replay operator, replay ensure that all observers see the same sequence
      * of emitted items, even if they subscribe after the Observable has begun emitting items
+     *
+     * relay(n)，使得即使在未订阅时，被订阅者已经发送了数据，订阅者也可以收到被订阅者在订阅之前的最多n个数据
      */
     private void doSomeWork() {
 

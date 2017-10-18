@@ -48,6 +48,9 @@ public class DebounceExampleActivity extends AppCompatActivity {
     /*
     * Using debounce() -> only emit an item from an Observable if a particular time-span has
     * passed without it emitting another item, so it will emit 2, 4, 5 as we have simulated it.
+    *
+    * 被订阅者在收到要发射消息的指令后，会等待一段时间，如果在这段时间内没有新的消息发射指令，
+    * 那么它会发射这条消息，否则会丢弃掉该消息，从这个新收到的值开始，重新等待设置的时间长度。
     */
     private void doSomeWork() {
         getObservable()

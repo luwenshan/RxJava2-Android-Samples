@@ -42,6 +42,9 @@ public class AsyncSubjectExampleActivity extends AppCompatActivity {
     /* An AsyncSubject emits the last value (and only the last value) emitted by the source
      * Observable, and only after that source Observable completes. (If the source Observable
      * does not emit any values, the AsyncSubject also completes without emitting any values.)
+     *
+     * AsyncSubject的所有订阅者只会在被订阅者整个序列发射完成之后才能收到值，并且仅仅会收到整个发射序列的最后一个值。
+     * 如果被观察者没有发射任何一个值，所有订阅者都不会收到出完成之外的其他消息。
      */
     private void doSomeWork() {
 

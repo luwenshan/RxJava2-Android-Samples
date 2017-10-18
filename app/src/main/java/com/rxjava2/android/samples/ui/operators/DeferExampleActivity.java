@@ -41,6 +41,8 @@ public class DeferExampleActivity extends AppCompatActivity {
 
     /*
      * Defer used for Deferring Observable code until subscription in RxJava
+     *
+     * defer可以延迟被订阅者的生成，也就是使得被订阅者在订阅发生时才生成。
      */
     private void doSomeWork() {
 

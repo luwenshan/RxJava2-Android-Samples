@@ -51,6 +51,7 @@ public class MergeExampleActivity extends AppCompatActivity {
         final Observable<String> aObservable = Observable.fromArray(aStrings);
         final Observable<String> bObservable = Observable.fromArray(bStrings);
 
+        // 与concat类似，连接两个被订阅者，但是不保证被订阅者发射数据的顺序
         Observable.merge(aObservable, bObservable)
                 .subscribe(getObserver());
     }

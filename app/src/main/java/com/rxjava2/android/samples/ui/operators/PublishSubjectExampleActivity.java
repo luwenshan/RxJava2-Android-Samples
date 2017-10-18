@@ -41,6 +41,8 @@ public class PublishSubjectExampleActivity extends AppCompatActivity {
 
     /* PublishSubject emits to an observer only those items that are emitted
      * by the source Observable, subsequent to the time of the subscription.
+     *
+     * 订阅者只会收到被订阅者在订阅之后发射的序列
      */
     private void doSomeWork() {
 

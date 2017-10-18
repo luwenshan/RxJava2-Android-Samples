@@ -50,6 +50,11 @@ public class ThrottleFirstExampleActivity extends AppCompatActivity {
     * Using throttleFirst() -> if the source Observable has emitted no items since
     * the last time it was sampled, the Observable that results from this operator
     * will emit no item for that sampling period.
+    *
+    * throttleFirst用来解决抖动的问题，可以设置一段时间，之后被订阅者会发射固定时间长度内的第一个事件，
+    * 而屏蔽其他事件。
+    *
+    * 输出：1,3,7
     */
     private void doSomeWork() {
         getObservable()
@@ -67,15 +72,15 @@ public class ThrottleFirstExampleActivity extends AppCompatActivity {
             public void subscribe(ObservableEmitter<Integer> emitter) throws Exception {
                 // send events with simulated time wait
                 Thread.sleep(0);
-                emitter.onNext(1); // skip
-                emitter.onNext(2); // deliver
+                emitter.onNext(1); // deliver
+                emitter.onNext(2); // skip
                 Thread.sleep(505);
-                emitter.onNext(3); // skip
+                emitter.onNext(3); // deliver
                 Thread.sleep(99);
                 emitter.onNext(4); // skip
                 Thread.sleep(100);
                 emitter.onNext(5); // skip
-                emitter.onNext(6); // deliver
+                emitter.onNext(6); // skip
                 Thread.sleep(305);
                 emitter.onNext(7); // deliver
                 Thread.sleep(510);
